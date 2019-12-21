@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Area | Pages</title>
+    <!-- Bootstrap core CSS -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css"/> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+   
+<!-- Bootstrap core CSS -->
+    <link href="/stylesheets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/welcome.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="/stylesheets/addUser1.css">
+    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/javascripts/js/bootstrap.min.js"></script>
+
+<style>
+            .table-responsive {
+
+overflow: auto;
+
+}
+
+.sticky {
+position: static;
+top: 0;
+width: 100%;
+}
+
+.sticky {
+padding-top: 60px;
+}
+
+#tab {
+overflow: auto;
+
+
+}
+
+@media (max-width: 800px) {
+.table-responsive {
+    overflow: auto;
+}
+}
+
+</style>
+   
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Training plus</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="https://www.torryharris.com/about-us/contact-us">Contact us</a></li>
+                    <li><a href="https://www.torryharris.com">About</a></li>
+               
+                    <li><a href="/users/logout">Logout</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <br><br>
+    <section id="main">
+        <div class="container">
+            <div class="container">
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active main-color-bg">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
+                        </a>
+
+                        <a href="/users/addmarks" id="id" class="list-group-item"><span
+                            class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Add result</a>
+                        <a href="/users/updatesubject" class="list-group-item"><span class="glyphicon glyphicon-pencil"
+                                aria-hidden="true"></span> Add subject</a>
+                        <a href="/users/updatemarks" class="list-group-item"><span class="glyphicon glyphicon-pencil"
+                            aria-hidden="true"></span> Update result</a>
+                        <a href="/users/getmarks" class="list-group-item"><span class="glyphicon glyphicon-user"
+                            aria-hidden="true"></span> View result</a>
+
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <!-- Website Overview -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading main-color-bg">
+                            <h3 class="panel-title">Add Result</h3>
+                        </div>
+                        <div class="panel-body" id="id1">
+                            <p id="getPara">content</p>
+                            <div class="w3-content" style="max-width:1600px">
+
+                                <!-- Grid -->
+                                <div class="w3-row w3-padding w3-border">
+
+                                    <!-- Blog entries -->
+                                    <div class="w3-col l12 s12">
+
+                                        <!-- Blog entry -->
+                                        <div class="w3-container w3-white w3-margin w3-padding-large">
+                                            <div class="select-boxes">
+                                                <div class="container">
+                                                    <div class="col-lg-9">
+                                                        <br>
+                                                        <br>
+
+
+                                                        <form class="form-horizontal" action=" #" method="post"
+                                                            id="resu_form">
+                                                            <fieldset>
+
+                                                                <!-- Form Name -->
+                                                                <legend> View </legend>
+
+                                                                <!-- Text input-->
+
+                                                                <div class="form-group">
+                                                                    <label class="col-md-4 control-label">Batch</label>
+                                                                    <div class="col-md-6  inputGroupContainer">
+                                                                        <div class="input-group"> <span
+                                                                                class="input-group-addon"><i
+                                                                                    class="glyphicon glyphicon-user"></i></span>
+                                                                            <input name="employee_batch" id="empBatch"
+                                                                                placeholder="Batch" class="form-control"
+                                                                                type="string">
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-4 control-label"></label>
+                                                                    <div class="col-md-4">
+                                                                        <button type="button" id="view1_button"
+                                                                            class="btn btn-primary">Submit<span
+                                                                                class="glyphicon glyphicon-send"></span></button>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <label class="col-md-4 control-label">Employee
+                                                                        ID</label>
+                                                                    <div class="col-md-6  inputGroupContainer">
+                                                                        <div class="input-group"> <span
+                                                                                class="input-group-addon"><i
+                                                                                    class="glyphicon glyphicon-user"></i></span>
+                                                                            <input name="employee_id" id="empno"
+                                                                                placeholder="Employee Id"
+                                                                                class="form-control" type="number">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <!-- Button -->
+                                                                <div class="form-group">
+                                                                    <label class="col-md-4 control-label"></label>
+                                                                    <div class="col-md-4">
+                                                                        <button type="button" id="view2_button"
+                                                                            class="btn btn-primary">Submit<span
+                                                                                class="glyphicon glyphicon-send"></span></button>
+                                                                    </div>
+                                                                </div>
+
+                                                            </fieldset>
+                                                        </form>
+                                                        <div>
+                                                            <input id="Input" type="text" placeholder="Search..">
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div id="tab">
+                                                    <div class="container" id="compartment2">
+                                                        <div class="container-body">
+                                                        
+                                                            <div clas="table-responsive">
+                                                                <table
+                                                                    class="table table-hover table-striped table-bordered "
+                                                                    id="myDataTable">
+
+                                                                    <thead class="pos">
+                                                                        <tr>
+                                                                            <th>Employee Id</th>
+                                                                            <th>Employee Name</th>
+                                                                            <th>Employee Batch</th>
+                                                                            <th>Subject</th>
+                                                                            <th>Marks</th>
+                                                                            <th>Subject</th>
+                                                                            <th>Marks</th>
+                                                                           
+
+                                                                        </tr>
+
+                                                                    </thead>
+                                                                    <tbody id="table_body">
+                                                                    </tbody>
+                                                                    <tfoot>
+                                                                    </tfoot>
+                                                                </table>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid padding">
+          <div class="row text-center">
+            <div class="col-md-4">
+              <hr class="light">
+              <p>+91-9864546731</p>
+              <p>torryharris@thbs.com</p>
+              <p>Global Village, soan tower ,6th floor,</p>
+              <p>Bangalore, Karnataka, 560002</p>
+            </div>
+            <div class="col-md-4">
+              <hr class="light">
+              <h5>Our hours</h5>
+              <hr class="light">
+              <p>Monday: 9am - 6pm</p>
+              <p>saturday: 9am - 4pm</p>
+              <p>sunday: closed</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our branch</h5>
+                <hr class="light">
+                <p>bangalore,Karnataka,miller road,560033</p>
+                <p>bangalore,Karnataka,manyata tech park,560069</p>
+                <p>bangalore,Karnataka,Rmz-infinte,560034</p>
+                <p>gurgon,220055</p>
+          </div>
+          <div class="col-12">
+            <hr class="light-100">
+            <h5>Copyright &copy 2019 D-Coders</h5>
+          </div>
+        </div>
+        
+        
+        </footer>
+    
+    <!-- Modals -->
+
+    <!-- Add Page -->
+   
+    <script>
+
+
+    </script>
+
+    <script>
+        CKEDITOR.replace('editor1');
+        // $("#add_button").click(function(){
+
+        //     $(".panel-body").load("admin.html");
+        // });
+
+
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- PrefixFree -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+    <!-- <script src="js/index.js"></script> -->
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#resu_form').bootstrapValidator({
+                // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+
+
+                    employee_id: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please enter employee id'
+                            }
+                        }
+                    },
+
+
+                    employee_batch: {
+                        validators: {
+                            stringLength: {
+                                min: 2,
+                            },
+                            notEmpty: {
+                                message: 'Please supply users batch name'
+                            }
+                        }
+                    },
+
+
+                }
+            });
+
+
+        });
+
+
+
+    </script>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var tab = document.getElementById("tab");
+        var sticky = tab.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                tab.classList.add("sticky")
+            } else {
+                tab.classList.remove("sticky");
+            }
+        }
+    </script>
+    </div>
+    <script src="/javascripts/js/jquery.min.js"></script>
+    <script src="/javascripts/js/bootstrap.min.js"></script>
+    <script src="/javascripts/js/jquery.dataTables.js"></script>
+    <script src="/javascripts/js/dataTables.bootstrap.js"></script>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var tab = document.getElementById("tab");
+        var sticky = tab.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                tab.classList.add("sticky")
+            } else {
+                tab.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#myDatatable').dataTable();
+        });
+    </script>
+    <!-- <script src="assets/js/anchor.min.js"></script> -->
+    <script>
+        $(document).ready(function () {
+    
+            $("#compartment2").hide();
+    
+            $("#view1_button").click(function () {
+                $("#table_body").empty();
+                console.log("In view1");
+    
+                var empBatch = $("#empBatch").val();
+                console.log(empBatch);
+    
+                if (empBatch !== "") {
+                    console.log("In if");
+                    $("#compartment2").show();
+    
+                    getValues1();
+    
+                } else {
+                    console.log("In else");
+                    alert("Please Enter the Batch Number");
+                }
+    
+    
+            });
+    
+        });
+    
+        function getValues1() {
+    
+            var empBatch = $("#empBatch").val();
+    
+            $.ajax("http://localhost:3000/users/trainer/getByEmployeeBatch/" + empBatch, {
+    
+                dataType: "json",
+                type: "GET",
+                success: function (data, status, xhr) {
+    
+                    console.log("in success");
+                    console.log(data);
+    
+                    console.log(data[0].length);
+    
+    
+                    data[0].forEach(element => {
+    
+    
+                    console.log(element);
+                    $("#table_body").append("<tr>" +
+                        "<td>" + element.empno + "</td>" +
+                        "<td>" + element.empName + "</td>" +
+                        "<td>" + element.empBatch + "</td>" +
+                        "<td>" + element.subjectList[0].subjectName + "</td>" +
+                         "<td>" + element.subjectList[0].subjectMarks + "</td>" +
+                        "<td>" + element.subjectList[1].subjectName + "</td>" +
+                         "<td>" + element.subjectList[1].subjectMarks + "</td>" +
+    
+                        "</tr>"
+    
+                    );
+    
+    
+                });
+                },
+                error: function (jqXhr, textStatus, errorMessage) { // error callback
+    
+                    console.log(jqXhr.status + ": " + jqXhr.statusText + "in error");
+                }
+            });
+    
+        }
+    
+    
+    </script>
+    
+  
+
+    <script>
+        $(document).ready(function () {
+
+            $("#compartment2").hide();
+
+            $("#view2_button").click(function () {
+                $("#table_body").empty();
+
+                console.log("In update button");
+               
+
+                var empno = $("#empno").val();
+                console.log(empno);
+
+                if (empno !== "") {
+                    console.log("In if");
+                    $("#compartment2").show();
+
+                    getValues2();
+
+                } else {
+                    console.log("In else");
+                    alert("Please Enter the employee Id");
+                }
+
+
+            });
+
+        });
+
+        function getValues2() {
+
+            
+           var empno = $("#empno").val();
+            
+            $.ajax("http://localhost:3000/users/trainer/getByEmployeeId/" +empno, {
+
+                dataType: "json",
+                type: "GET",
+                success: function (data, status, xhr) {
+
+                    console.log("in success");
+                    console.log(data);
+                    // $("#empno").val(data[0].empno);
+                    // $("#emp_name").val(data[0].empName);
+                    // $("#emp_batch").val(data[0].empBatch);
+                    // $("#subject").val(data[0].subject);
+                    // $("#marks").val(data[0].marks);
+                    data.forEach(element => {
+
+                        console.log(element);
+                        $("#table_body").append("<tr>" +
+                            "<td>" + element.empno + "</td>" +
+                            "<td>" + element.empName + "</td>" +
+                            "<td>" + element.empBatch + "</td>" +
+                            "<td>" + element.subjectList[0].subjectName + "</td>" +
+                            "<td>" + element.subjectList[0].subjectMarks + "</td>" +
+                            "<td>" + element.subjectList[1].subjectName + "</td>" +
+                            "<td>" + element.subjectList[1].subjectMarks + "</td>" +
+                            "<td>" + element.subjectList[2].subjectName + "</td>" +
+                            "<td>" + element.subjectList[2].subjectMarks + "</td>" +
+
+                            "</tr>"
+
+                        );
+
+
+                    });
+                },
+                error: function (jqXhr, textStatus, errorMessage) { // error callback
+
+                    console.log(jqXhr.status + ": " + jqXhr.statusText + "in error");
+                }
+            });
+
+        }
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#Input").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#table_body tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            var getCount = 0;
+            $.ajax("http://localhost:3000/users/trainer/getEmployeesMarks", {
+
+                dataType: "json", // type of response data
+                type: "GET",
+                success: function (data, status, xhr) {
+
+                    getCount = data.length;
+                    console.log(getCount);
+                    $("#get_count").html(getCount);
+
+                },
+                error: function (jqXhr, textStatus, errorMessage) { // error callback
+
+                    console.log('Error: ' + errorMessage);
+                }
+            });
+
+
+
+        });
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

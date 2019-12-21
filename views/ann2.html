@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Area | Pages</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   -->
+    <!-- Bootstrap core CSS -->
+    <link href="/stylesheets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="/stylesheets/welcome.css" rel="stylesheet">
+  
+  
+  <link rel="stylesheet"  href="/stylesheets/addUser1.css">
+    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Training plus</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ><a href="https://www.torryharris.com/about-us/contact-us">Contact us</a></li>
+                        <li><a href="https://www.torryharris.com">About</a></li>
+                   
+                        <li><a href="/users/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+    
+  <br>
+  <br>
+  
+  
+    <section id="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active main-color-bg">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
+                        </a>
+
+                        <a href="/users/ann1" id="id" class="list-group-item"><span
+                            class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>Individual Analysis</a>
+                    <a href="/users/ann2" class="list-group-item"><span class="glyphicon glyphicon-pencil"
+                            aria-hidden="true"></span>Batch Analysis</a>
+                             </div>
+                </div>
+                <div class="col-md-9">
+                    <!-- Website Overview -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading main-color-bg">
+                            <h3 class="panel-title">Batch Analysis</h3>
+                        </div>
+                        <div class="panel-body" id="id1">
+                            <!-- <p id="getPara">shubha</p>
+                            <div class="w3-content" style="max-width:1600px"> -->
+
+                                <!-- Grid -->
+                                <div class="w3-row w3-padding w3-border">
+
+                                    <!-- Blog entries -->
+                                    <div class="w3-col l12 s12">
+
+                                        <!-- Blog entry -->
+                                        <div class="w3-container w3-white w3-margin w3-padding-large">
+                                            <div class="select-boxes">
+                                                <div class="container">
+                                                    <div class="col-lg-9">
+                                                        <br>
+                                                        <br>
+
+
+                                                        <form class="form-horizontal" action=" " method="post"
+                                                            id="reg_form">
+                                                            <fieldset>
+
+                                                                <!-- Form Name -->
+                                                                <legend> Enter the bacth number  </legend>
+
+                                                                <!-- Text input-->
+
+                                                                <div class="form-group">
+                                                                    <label class="col-md-4 control-label">Batch Number
+                                                                        </label>
+                                                                    <div class="col-md-6  inputGroupContainer">
+                                                                        <div class="input-group"> <span
+                                                                                class="input-group-addon"><i
+                                                                                    class="glyphicon glyphicon-user"></i></span>
+                                                                            <input name="employee_id" id="empno"
+                                                                                placeholder="Batch No"
+                                                                                class="form-control" type="number">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <!-- Button -->
+                                                                <div class="form-group">
+                                                                    <label class="col-md-4 control-label"></label>
+                                                                    <div class="col-md-4">
+                                                                        <button type="button" id="delete_button"
+                                                                            class="btn btn-warning">Show Chart<span
+                                                                                class="glyphicon glyphicon-send"></span></button>
+                                                                    </div>
+                                                                    <div><br><br><br><br>
+                                                                        <h3  id="msg"></h3><br><br><br>
+                                                                            <p  id="p1"></p><br>
+                                                                            <p  id="p2"></p><br>
+                                                                            <p  id="p3"></p><br>
+                                                                            <p  id="p4"></p>
+                                                                            
+                                                                        <div style="width:400px; float: left;">
+                                                                            <canvas id="lineChart" width="400" height="400"></canvas>
+                                                                          
+                                                                          </div>
+                                                                          
+                                                                          <div style="width:400px; float: left;" >
+                                                                            <canvas id="barChart" width="400" height="400"></canvas>
+                                                                          
+                                                                          </div >
+                                                                            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+                                                                            
+                                                                          
+                                                                            
+                                                                            <script>
+                                                                              function myFunction(marks,subjects,types,msg) {
+                                                                          
+                                                                          
+                                                                                console.log(marks);
+                                                                                const CHART = document.getElementById("lineChart");
+                                                                          const CHART2 = document.getElementById("barChart");
+                                                                          
+                                                                          
+                                                                          Chart.defaults.scale.ticks.beginAtZero = true;
+                                                                          var chartType = types;
+                                                                          
+                                                                          let barChart = new Chart (CHART2,{
+                                                                              type: chartType, 
+                                                                              data: {
+                                                                                 
+                                                                                  labels: subjects,
+                                                                                      datasets: [
+                                                                                          {
+                                                                                              label: msg,
+                                                                                              backgroundColor : '#00ff00',
+                                                                                              borderColor: '#00ff00',
+                                                                                              borderWidth: 2,
+                                                                                              data:marks
+                                                                                          }
+                                                                                      ]
+                                                                                  }
+                                                                          
+                                                                          });
+                                                                          
+                                                                          
+                                                                         
+                                                                          
+                                                                          }
+                                                                  
+                                                                            </script>
+                                                                            
+                                                                         </div> 
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modals -->
+
+    <!-- Add Page -->
+    <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add Page</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Page Title</label>
+                            <input type="text" class="form-control" placeholder="Page Title">
+                        </div>
+                        <div class="form-group">
+                            <label>Page Body</label>
+                            <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Published
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>Meta Tags</label>
+                            <input type="text" class="form-control" placeholder="Add Some Tags...">
+                        </div>
+                        <div class="form-group">
+                            <label>Meta Description</label>
+                            <input type="text" class="form-control" placeholder="Add Meta Description...">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+    </script>
+
+    <script>
+        CKEDITOR.replace('editor1');
+        // $("#add_button").click(function(){
+
+        //     $(".panel-body").load("admin.html");
+        // });
+
+
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/javascripts/js/bootstrap.min.js"></script>
+
+
+    <!-- PrefixFree -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+    <!-- <script src="js/index.js"></script> -->
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#reg_form').bootstrapValidator({
+                // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+
+
+                    employee_id: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please supply users employee ID'
+                            }
+                        }
+                    },
+
+                    employee_role: {
+                        validators: {
+                            stringLength: {
+                                min: 2,
+                            },
+                            notEmpty: {
+                                message: 'Please supply users employee role'
+                            }
+                        }
+                    },
+
+                    first_name: {
+                        validators: {
+                            stringLength: {
+                                min: 2,
+                            },
+                            notEmpty: {
+                                message: 'Please supply users first name'
+                            }
+                        }
+                    },
+                    last_name: {
+                        validators: {
+                            stringLength: {
+                                min: 2,
+                            },
+                            notEmpty: {
+                                message: 'Please supply users last name'
+                            }
+                        }
+                    },
+
+                    employee_batch: {
+                        validators: {
+                            stringLength: {
+                                min: 2,
+                            },
+                            notEmpty: {
+                                message: 'Please supply users batch name'
+                            }
+                        }
+                    },
+
+                    phone: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please supply your phone number'
+                            },
+                            phone: {
+                                country: 'US',
+                                message: 'Please supply a vaild phone number with area code'
+                            }
+
+                        }
+                    },
+                    address: {
+                        validators: {
+                            stringLength: {
+                                min: 8,
+                            },
+                            notEmpty: {
+                                message: 'Please supply your street address'
+                            }
+                        }
+                    },
+
+                    status: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please supply employee status'
+                            }
+                        }
+                    },
+
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please supply your email address'
+                            },
+                            emailAddress: {
+                                message: 'Please supply a valid email address'
+                            }
+                        }
+                    },
+
+                    password: {
+                        validators: {
+                            identical: {
+                                field: 'confirmPassword',
+                                message: 'Confirm your password below - type same password please'
+                            }
+                        }
+                    },
+                    confirmPassword: {
+                        validators: {
+                            identical: {
+                                field: 'password',
+                                message: 'The password and its confirm are not the same'
+                            }
+                        }
+                    },
+
+
+                }
+            });
+
+
+            //   .on('success.form.bv', function (e) {
+            //       $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+            //      // $('#reg_form').data('bootstrapValidator').resetForm();
+
+            //       // Prevent form submission
+            //       e.preventDefault();
+
+            //       // Get the form instance
+            //       var $form = $(e.target);
+
+            //       // Get the BootstrapValidator instance
+            //       var bv = $form.data('bootstrapValidator');
+
+            //       // Use Ajax to submit form data
+            //     //   $.post($form.attr('action'), $form.serialize(), function (result) {
+            //     //       console.log(result);
+            //     //   }, 'json');
+            //   });
+        });
+
+
+    </script>
+
+            <script>
+
+    
+            $(document).ready(function(){
+                    var counts=1;
+                    $("#delete_button").click(function(){
+                      var empno = $("#empno").val();
+                      counts++;
+                      if(counts%2==0){
+                        var types='bar';
+                      }
+                      else{
+                        var types="line";
+                      }
+                      if(empno==='')
+                            {
+                                alert("Employee Id cant be empty");
+                                return;
+                            }
+                           
+            var queryStr = "?batch=" + empno;
+            console.log(queryStr);
+                           $.ajax("http://localhost:3000/users/trainer/getEmployeeMarksByBatch/" +queryStr, {
+            
+                                type: "GET",
+                                success: function (data, status, xhr) {   // success callback function
+                                    console.log(data);
+                                    var a=(data.length);
+                                
+                                    var java= [];
+                                    var unix= [];
+                                    var sql= [];
+                                    var web= [];
+                                    var subjects=[];
+                                    var chart2= [];
+                                    var i,j,m;
+                                    for (j = 0; j < a; j++) {
+                                    m=(data[0].subjectList[j].subjectName);
+                                    subjects.push(m);
+                                      }
+                                    for (j = 0; j < a; j++) {
+                                        
+                                    m=(data[j].subjectList[0].subjectMarks);
+                                    unix.push(m);
+                          
+                                  
+                                      }
+                                      for (j = 0; j < a; j++) {
+                                        
+                                        m=(data[j].subjectList[1].subjectMarks);
+                                        java.push(m);
+                                     
+                                      
+                                          }
+                                          for (j = 0; j < a; j++) {
+                                        
+                                        m=(data[j].subjectList[2].subjectMarks);
+                                        sql.push(m);
+                                       
+                                      
+                                          }
+                                          for (j = 0; j < a; j++) {
+                                        
+                                        m=(data[j].subjectList[3].subjectMarks);
+                                        web.push(m);
+                                     
+                                      
+                                          }
+                                          console.log(unix);
+                                          console.log(java);
+                                          console.log(sql);            
+                                          console.log(web);
+
+                                           var no=unix.length;
+                    console.log(no);
+                    var Unixsum = 0;
+
+
+                    for(var i = 0; i < no; i++){
+
+                      Unixsum += unix[i]
+
+                        }
+                        chart2.push(Unixsum/no);
+                  var Javasum = 0;
+
+                    for(var i = 0; i < no; i++){
+
+                      Javasum += java[i]
+
+                        }
+                   chart2.push(Javasum/no);
+                   
+                   var Sqlsum = 0;
+
+                    for(var i = 0; i < no; i++){
+
+                    Sqlsum += sql[i]
+
+                        }
+                   chart2.push(Sqlsum/no);
+
+                   var Websum = 0;
+
+                    for(var i = 0; i < no; i++){
+
+                      Websum += web[i]
+
+                        }
+                   chart2.push(Websum/no);
+                   console.log(chart2);
+                   document.getElementById("msg").innerHTML = "Batch Average In Subjects:-"; 
+                   document.getElementById("p1").innerHTML = "Unix: " + chart2[0]; 
+                   document.getElementById("p2").innerHTML =  "Java: "+ chart2[1]  ;
+                   document.getElementById("p3").innerHTML = "Sql:  " + chart2[2]; 
+                   document.getElementById("p4").innerHTML =  "web: "+ chart2[3]  ;      
+                   myFunction(chart2,subjects,types,"Batch performance");
+                   
+                   
+
+
+
+                                  }
+                                  
+                                  
+                                  ,
+                              error:function( errorMessage)
+                              {
+                                  alert(errorMessage);
+                              }
+                          });
+                   
+                      return false;
+                      });
+                    });
+            
+            
+                </script>
+
+    <footer>
+        <div class="container-fluid padding">
+          <div class="row text-center">
+            <div class="col-md-4">
+              <hr class="light">
+              <p>+91-9864546731</p>
+              <p>torryharris@thbs.com</p>
+              <p>Global Village, soan tower ,6th floor,</p>
+              <p>Bangalore, Karnataka, 560002</p>
+            </div>
+            <div class="col-md-4">
+              <hr class="light">
+              <h5>Our hours</h5>
+              <hr class="light">
+              <p>Monday: 9am - 6pm</p>
+              <p>saturday: 9am - 4pm</p>
+              <p>sunday: closed</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our branch</h5>
+                <hr class="light">
+                <p>bangalore,Karnataka,miller road,560033</p>
+                <p>bangalore,Karnataka,manyata tech park,560069</p>
+                <p>bangalore,Karnataka,Rmz-infinte,560034</p>
+                <p>gurgon,220055</p>
+          </div>
+          <div class="col-12">
+            <hr class="light-100">
+            <h5>Copyright &copy 2019 D-Coders</h5>
+          </div>
+        </div>
+        
+        
+        </footer>
+    
+</body>
+
+</html>

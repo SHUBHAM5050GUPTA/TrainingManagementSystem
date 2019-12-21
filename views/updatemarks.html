@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Area | Pages</title>
+    <!-- Bootstrap core CSS -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    -->
+<!-- Bootstrap core CSS -->
+    <link href="/stylesheets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/welcome.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="/stylesheets/addUser1.css">
+    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/javascripts/js/bootstrap.min.js"></script>
+
+
+   
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Training plus</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="https://www.torryharris.com/about-us/contact-us">Contact us</a></li>
+                    <li><a href="https://www.torryharris.com">About</a></li>
+               
+                    <li><a href="/users/logout">Logout</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <br><br>
+   
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active main-color-bg">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
+                        </a>
+                        <a href="/users/addmarks" id="id" class="list-group-item"><span
+                            class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Add result</a>
+                        <a href="/users/updatesubject" class="list-group-item"><span class="glyphicon glyphicon-pencil"
+                                aria-hidden="true"></span> Add subject</a>
+                        <a href="/users/updatemarks" class="list-group-item"><span class="glyphicon glyphicon-pencil"
+                            aria-hidden="true"></span> Update result</a>
+                        <a href="/users/getmarks" class="list-group-item"><span class="glyphicon glyphicon-user"
+                            aria-hidden="true"></span> View result</a>
+
+                        
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <!-- Website Overview -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading main-color-bg">
+                            <h3 class="panel-title">Update</h3>
+                        </div>
+                        <div class="panel-body" id="id1">
+                            <p id="getPara"></p>
+                            <div class="w3-content" style="max-width:1600px">
+
+                                <!-- Grid -->
+                                <div class="w3-row w3-padding w3-border">
+
+                                    <!-- Blog entries -->
+                                    <div class="w3-col l12 s12">
+
+                                        <!-- Blog entry -->
+                                        <div class="w3-container w3-white w3-margin w3-padding-large">
+                                            <div class="select-boxes">
+                                                <div class="container">
+                                                    <div class="col-lg-9">
+                                                        <br>
+                                                        <br>
+
+
+                                                        <form class="form-horizontal" id="resu_form">
+
+                                                            <fieldset>
+                                                                <!-- Form Name -->
+                                                                <legend> Update Marks </legend>
+
+
+
+                                                                    <!-- Text input-->
+
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">Emoloyee
+                                                                            Id</label>
+                                                                        <div class="col-md-6  inputGroupContainer">
+                                                                            <div class="input-group"> <span
+                                                                                    class="input-group-addon"><i
+                                                                                        class="glyphicon glyphicon-user"></i></span>
+                                                                                <input name="employee_id" id="empno"
+                                                                                    placeholder="Employee Id"
+                                                                                    class="form-control" type="number">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <!-- Text input-->
+
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">Subject</label>
+                                                                        <div class="col-md-6  inputGroupContainer">
+                                                                            <div class="input-group"> <span
+                                                                                    class="input-group-addon"><i
+                                                                                        class="glyphicon glyphicon-user"></i></span>
+                                                                                <input name="Subject" id="subject"
+                                                                                    placeholder="Subject"
+                                                                                    class="form-control" type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- Text input-->
+
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label">Marks
+                                                                            </label>
+                                                                        <div class="col-md-6  inputGroupContainer">
+                                                                            <div class="input-group"> <span
+                                                                                    class="input-group-addon"><i
+                                                                                        class="glyphicon glyphicon-user"></i></span>
+                                                                                <input name="Marks" id="marks"
+                                                                                    placeholder="Marks"
+                                                                                    class="form-control" type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    
+                                                                    <!-- Button -->
+                                                                    <div class="form-group">
+                                                                        <label class="col-md-4 control-label"></label>
+                                                                        <div class="col-md-4">
+                                                                            <button type="submit" id="post_button"
+                                                                                class="btn btn-warning">Submit<span
+                                                                                    class="glyphicon glyphicon-send"></span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+
+                                                            
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid padding">
+          <div class="row text-center">
+            <div class="col-md-4">
+              <hr class="light">
+              <p>+91-9864546731</p>
+              <p>torryharris@thbs.com</p>
+              <p>Global Village, soan tower ,6th floor,</p>
+              <p>Bangalore, Karnataka, 560002</p>
+            </div>
+            <div class="col-md-4">
+              <hr class="light">
+              <h5>Our hours</h5>
+              <hr class="light">
+              <p>Monday: 9am - 6pm</p>
+              <p>saturday: 9am - 4pm</p>
+              <p>sunday: closed</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our branch</h5>
+                <hr class="light">
+                <p>bangalore,Karnataka,miller road,560033</p>
+                <p>bangalore,Karnataka,manyata tech park,560069</p>
+                <p>bangalore,Karnataka,Rmz-infinte,560034</p>
+                <p>gurgon,220055</p>
+          </div>
+          <div class="col-12">
+            <hr class="light-100">
+            <h5>Copyright &copy 2019 D-Coders</h5>
+          </div>
+        </div>
+        
+        
+        </footer>
+    
+    <!-- Modals -->
+
+    <!-- Add Page -->
+    <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add Page</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Page Title</label>
+                            <input type="text" class="form-control" placeholder="Page Title">
+                        </div>
+                        <div class="form-group">
+                            <label>Page Body</label>
+                            <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Published
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>Meta Tags</label>
+                            <input type="text" class="form-control" placeholder="Add Some Tags...">
+                        </div>
+                        <div class="form-group">
+
+                            <label>Meta Description</label>
+                            <input type="text" class="form-control" placeholder="Add Meta Description...">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+    </script>
+
+    <script>
+        CKEDITOR.replace('editor1');
+        // $("#add_button").click(function(){
+
+        //     $(".panel-body").load("admin.html");
+        // });
+
+
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- PrefixFree -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+    <!-- <script src="js/index.js"></script> -->
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#resu_form').bootstrapValidator({
+                // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+
+
+                    employee_id: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please enter employee ID'
+                            }
+                        }
+                    },
+
+                    Subject: {
+                        validators: {
+                            stringLength: {
+                                min: 2,
+                            },
+                            notEmpty: {
+                                message: 'Please enter subject'
+                            }
+                        }
+                    },
+
+                    Marks: {
+                        validators: {
+                            stringLength: {
+                                min: 2,
+                            },
+                            notEmpty: {
+                                message: 'Please enter marks'
+                            }
+                        }
+                    },
+                 }
+            });
+
+
+            //   .on('success.form.bv', function (e) {
+            //       $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+            //      // $('#reg_form').data('bootstrapValidator').resetForm();
+
+            //       // Prevent form submission
+            //       e.preventDefault();
+
+            //       // Get the form instance
+            //       var $form = $(e.target);
+
+            //       // Get the BootstrapValidator instance
+            //       var bv = $form.data('bootstrapValidator');
+
+            //       // Use Ajax to submit form data
+            //     //   $.post($form.attr('action'), $form.serialize(), function (result) {
+            //     //       console.log(result);
+            //     //   }, 'json');
+            //   });
+        });
+
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+
+
+
+
+            $("#post_button").click(function () {
+
+                console.log("In post method");
+                // $("#getPara").append("In post method");
+                var empno = $("#empno").val();
+                var subjectName = $("#subject").val();
+                var subjectMarks = $("#marks").val();
+
+                console.log(empno + " " + subjectName + " " +  subjectMarks);
+                // $("#getPara").append(empno + " " + subject + " " +  marks);
+
+                $.ajax("http://localhost:3000/users/trainer/updateEmployeesMarks/"+empno, {
+
+
+                    type: "PUT",
+                    data: {
+                        //update data goes here
+                        "empno":empno,
+                        "subjectName":subjectName,
+                        "subjectMarks":subjectMarks  
+                         },
+                    success: function (data, status, xhr) {   // success callback function
+
+                        $("#getPara").append("In success");
+
+
+                    },
+                    error: function (jqXhr, textStatus, errorMessage) { // error callback 
+                        $("#getPara").append('Error: ' + errorMessage);
+                    }
+                });
+                alert("data updated successfully");
+
+            });
+
+
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            var getCount = 0;
+            $.ajax("http://localhost:3000/users/trainer/getEmployeesMarks", {
+
+                dataType: "json", // type of response data
+                type: "GET",
+                success: function (data, status, xhr) {
+
+                    getCount = data.length;
+                    console.log(getCount);
+                    $("#get_count").html(getCount);
+
+                },
+                error: function (jqXhr, textStatus, errorMessage) { // error callback
+
+                    console.log('Error: ' + errorMessage);
+                }
+            });
+
+
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>
